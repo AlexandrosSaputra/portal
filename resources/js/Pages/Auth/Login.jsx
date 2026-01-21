@@ -34,8 +34,8 @@ export default function Login({ status }) {
                 <div className="w-full max-w-md">
                     <div className="animate-fade-up rounded-3xl bg-[color:var(--login-card-soft)] p-8 shadow-[0_20px_70px_rgba(15,23,42,0.35)] ring-1 ring-white/15 sm:p-10">
                         <div className="text-center">
-                            <div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[color:var(--login-ink-soft)]">
-                                <ApplicationLogo className="h-9 w-9 fill-current text-[color:var(--login-accent)]" />
+                            <div className="mx-auto flex items-center justify-center">
+                                <ApplicationLogo className="w-24 fill-current" />
                             </div>
                             <p className="mt-4 text-xs uppercase tracking-[0.3em] text-slate-400">
                                 Masuk
@@ -70,9 +70,10 @@ export default function Login({ status }) {
                                 <TextInput
                                     id="username"
                                     name="username"
+                                    placeholder="Masukkan username"
                                     value={data.username}
                                     className="mt-2 block w-full rounded-xl border-slate-200 bg-white/90 px-4 py-3 text-slate-900 placeholder:text-slate-400 shadow-sm focus:border-[color:var(--login-accent)] focus:ring-[color:var(--login-accent)]"
-                                    autoComplete="username"
+                                    autoComplete="username"               
                                     isFocused={true}
                                     onChange={(e) =>
                                         setData('username', e.target.value)
@@ -93,6 +94,7 @@ export default function Login({ status }) {
                                 <TextInput
                                     id="password"
                                     type="password"
+                                    placeholder="Masukkan password"
                                     name="password"
                                     value={data.password}
                                     className="mt-2 block w-full rounded-xl border-slate-200 bg-white/90 px-4 py-3 text-slate-900 placeholder:text-slate-400 shadow-sm focus:border-[color:var(--login-accent)] focus:ring-[color:var(--login-accent)]"
