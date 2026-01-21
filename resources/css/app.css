@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --login-bg: #0b0f1c;
+        --login-card: #f8fafc;
+        --login-card-soft: rgba(248, 250, 252, 0.95);
+        --login-ink: #0f172a;
+        --login-ink-soft: rgba(15, 23, 42, 0.05);
+        --login-accent: #f59e0b;
+        --login-glow-1: #fbbf24;
+        --login-glow-2: #38bdf8;
+    }
+}
+
+@layer utilities {
+    @keyframes fade-up {
+        0% {
+            opacity: 0;
+            transform: translateY(16px);
+        }
+        100% {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .animate-fade-up {
+        animation: fade-up 700ms ease-out both;
+    }
+
+    .animate-delay-100 {
+        animation-delay: 120ms;
+    }
+
+    .animate-delay-200 {
+        animation-delay: 240ms;
+    }
+}
